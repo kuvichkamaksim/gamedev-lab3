@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Team-lambda shooter</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/bootstrap-reboot.css" />
+</head>
+<body>
+  <canvas id="game-canvas"></canvas>
+  <div id="menu">
+    <h1>Welcome to team-lambda shooter</h1>
+    <input type="text" id="username" placeholder="Enter your username" />
+    <span id="error-message" class="hidden"></span>
+    <button id="play">Start Game</button>
+  </div>
+  <div id="leaderboard" class="hidden">
+    <table>
+      <tr>
+        <th>Username</th>
+        <th>Score</th>
+      </tr>
+      <tr><td></td><td></td></tr>
+      <tr><td></td><td></td></tr>
+      <tr><td></td><td></td></tr>
+      <tr><td></td><td></td></tr>
+    </table>
+  </div>
+  <div id="disconnect" class="hidden">
+    <div>
+      <h2>Connection with server lost</h2>
+      <hr />
+      <button id="reconnect">Try to reconnect</button>
+    </div>
+  </div>
+</body>
+</html>

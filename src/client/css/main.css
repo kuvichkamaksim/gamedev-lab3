@@ -1,0 +1,105 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+button:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+button:focus {
+  outline: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#game-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+#menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  padding: 20px 30px;
+  background-color: rgb(193, 235, 253);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+#menu > input {
+  width: 45%;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  border-bottom: 1px solid black;
+  margin-bottom: 8px;
+  padding: 3px;
+  text-align: center;
+}
+
+#menu > input:hover {
+  outline: none;
+}
+
+#menu > #play {
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(83, 143, 168);
+  box-shadow: 0px 2px 3px 0px rgb(68, 68, 68);
+  padding: 5px 20px;
+  transition: background-color 0.2s ease;
+}
+
+#leaderboard {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#leaderboard > th {
+  text-align: center;
+  padding: 2px 5px;
+}
+
+#leaderboard > td {
+  text-align: center;
+  padding: 2px 5px;
+}
+
+#disconnect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+#disconnect > div {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  padding: 16px 24px;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+}
