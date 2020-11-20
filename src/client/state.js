@@ -18,8 +18,8 @@ export const onGameUpdate = (update) => {
     lastGameUpdateTime = Date.now();
   }
 
-  gameUpdates.push(update);
-  updateLeadersTable(update.leadersTable);
+  gameUpdates.push({ player: update.me, enemies: update.others, bullets: update.bullets });
+  updateLeadersTable(update.leaderboard);
 
   // keep only one game update earlier the server time
   const latestUpdateIndex = getLatestUpdateIndex();
@@ -86,8 +86,8 @@ export const getLatestState = () => {
       (serverTimestamp - lastUpdate.t) / (nextUpdate.t - lastUpdate.t);
 
     return {
-      me: interpolateObjects(lastUpdate.me, nextUpdate.me, coefficient),
-      others: interpolateArrayOfObjects(lastUpdate.others, nextUpdate.others, coefficient),
+      player: interpolateObjects(lastUpdate.me, nextUpdate.me, coefficient),
+      enemies: interpolateArrayOfObjects(lastUpdate.others, nextUpdate.others, coefficient),
       bullets: interpolateArrayOfObjects(lastUpdate.bullets, nextUpdate.bullets, coefficient),
     };
   }

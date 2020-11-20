@@ -69,19 +69,24 @@ button:focus {
   position: fixed;
   top: 10px;
   right: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #a6b5d1;
   padding: 10px;
   border-radius: 5px;
 }
 
-#leaderboard > th {
+#leaderboard tr {
   text-align: center;
   padding: 2px 5px;
 }
 
-#leaderboard > td {
+#leaderboard td, th {
   text-align: center;
   padding: 2px 5px;
+  border-bottom: 1px solid black;
+}
+
+#leaderboard tr td:first-child, th:first-child {
+  border-right: 1px solid black;
 }
 
 #disconnect {

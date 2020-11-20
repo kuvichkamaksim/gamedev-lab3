@@ -10,11 +10,12 @@ export const updateLeadersTable = (playersScores) => {
       rows[index + 1].innerHTML =
       `<td>${username.slice(0, 15) || 'No name'}</td><td>${score}</td>`;
     })
-  } else {
-    // for missed users draw empty lines
-    for (let i = 0; i < 4; i++) {
-      rows[i].innerHTML = '<td>-</td><td>-</td>';
-    }
+  }
+
+  // for missed users draw empty lines
+  const startIndex = playersScores && playersScores.length ? playersScores.length : 0;
+  for (let i = startIndex; i < 4; i++) {
+    rows[i + 1].innerHTML = '<td>-</td><td>-</td>';
   }
 };
 

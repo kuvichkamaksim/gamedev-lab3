@@ -23,21 +23,21 @@ module.exports = {
           },
         },
       },
-      // {
-      //   test: /\.css$/,
-      //   use: [
-      //     {
-      //       loader: MiniCssExtractPlugin.loader,
-      //     },
-      //     'css-loader',
-      //   ],
-      // },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          'css-loader',
+        ],
+      },
     ],
   },
   plugins: [
-    // new MiniCssExtractPlugin({
-    //   filename: '[name].[contenthash].css',
-    // }),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/client/html/index.html',

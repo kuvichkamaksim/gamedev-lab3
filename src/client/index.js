@@ -7,6 +7,9 @@ import { startGameDrawing, startMenuDrawing } from './view';
 import { startCapturingInput, stopCapturingInput } from './input';
 import { hideLeadersTable, showLeadersTable } from './leadersTable';
 
+import './css/bootstrap-reboot.css';
+import './css/main.css';
+
 const mainMenu = document.getElementById('menu');
 const startGameButton = document.getElementById('play');
 const username = document.getElementById('username');
